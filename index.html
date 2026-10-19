@@ -21,9 +21,22 @@
 
 <body>
 
-  <!-- PORTADA: utiliza portada.jpg desde style.css -->
+  <!-- PORTADA RESPONSIVE -->
 
   <header class="hero" id="inicio">
+
+    <!-- Fotografía según dispositivo -->
+    <picture class="hero-photo">
+      <source
+        media="(max-width: 767px)"
+        srcset="./portada-mobile.jpg"
+      >
+      <img
+        src="./portada.jpg"
+        alt="Lis y Andrés compartiendo un momento especial frente al mar"
+        fetchpriority="high"
+      >
+    </picture>
 
     <nav class="nav container" aria-label="Navegación principal">
 
@@ -157,7 +170,7 @@
 
   </main>
 
-  <!-- NUESTRA HISTORIA: utiliza nosotros.jpg -->
+  <!-- NUESTRA HISTORIA -->
 
   <section id="historia" class="story">
 
