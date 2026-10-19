@@ -1,31 +1,222 @@
+
 <!doctype html>
 <html lang="es-CL">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0c2e45"><meta name="description" content="Nuestra lista de deseos: regalos con significado para comenzar una nueva etapa juntos.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0c2e45">
+  <meta name="description" content="Nuestra lista de deseos: regalos con significado para comenzar una nueva etapa juntos.">
+
   <title>Lis & Andrés · Nuestra lista de deseos</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
+
 <body>
+
+  <!-- PORTADA PRINCIPAL -->
+
   <header class="hero" id="inicio">
     <nav class="nav container" aria-label="Navegación principal">
-      <a class="monogram" href="#inicio" aria-label="Inicio">L<span>│</span>A <small>✦</small></a>
-      <div class="nav-links"><a href="#inicio">Inicio</a><a href="#deseos">Lista de regalos</a><a href="#historia">Nuestra historia</a></div>
-      <a class="nav-pill" href="#deseos">♡ Nuestros deseos</a>
+
+      <a class="monogram" href="#inicio" aria-label="Inicio">
+        L<span>│</span>A <small>✦</small>
+      </a>
+
+      <div class="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#deseos">Lista de regalos</a>
+        <a href="#historia">Nuestra historia</a>
+      </div>
+
+      <a class="nav-pill" href="#deseos">
+        ♡ Nuestros deseos
+      </a>
     </nav>
-    <div class="hero-content container"><p class="eyebrow gold">NUESTRA LISTA DE REGALOS</p><h1>Un nuevo<br>comienzo</h1><div class="gold-line"></div><p class="hero-sub">Más que regalos, son experiencias, momentos y detalles que formarán parte de nuestra vida juntos.</p><a class="btn btn-gold" href="#deseos">EXPLORAR DESEOS <span>→</span></a></div>
-    <div class="hero-note">Lis & Andrés <span>·</span> Nuestra historia continúa</div>
+
+    <div class="hero-content container">
+      <p class="eyebrow gold">NUESTRA LISTA DE REGALOS</p>
+
+      <h1>Un nuevo<br>comienzo</h1>
+
+      <div class="gold-line"></div>
+
+      <p class="hero-sub">
+        Más que regalos, son experiencias, momentos y detalles
+        que formarán parte de nuestra vida juntos.
+      </p>
+
+      <a class="btn btn-gold" href="#deseos">
+        EXPLORAR DESEOS <span>→</span>
+      </a>
+    </div>
+
+    <div class="hero-note">
+      Lis & Andrés <span>·</span> Nuestra historia continúa
+    </div>
   </header>
-  <section class="benefits" aria-label="Sobre nuestra lista"><div class="container benefits-grid"><div><span class="benefit-icon">♧</span><strong>REGALOS CON SIGNIFICADO</strong><p>Cada deseo cuenta una parte de nuestra historia.</p></div><div><span class="benefit-icon">♡</span><strong>DESEOS PERSONALIZADOS</strong><p>Inspirados en lo que nos gusta y soñamos.</p></div><div><span class="benefit-icon">✧</span><strong>UN DETALLE ESPECIAL</strong><p>Elige el deseo que más te inspire.</p></div></div></section>
-  <main id="deseos" class="catalog container"><div class="catalog-top"><div><p class="eyebrow bronze">NUESTRA LISTA</p><h2>Todos nuestros deseos <span class="heading-line"></span></h2></div><p class="catalog-intro">Un poquito de nuestros gustos, nuestros planes y todo lo que soñamos construir juntos.</p></div>
-    <div class="toolbar"><label class="search-wrap"><span aria-hidden="true">⌕</span><input id="buscar" type="search" placeholder="Buscar un deseo..." aria-label="Buscar un deseo"></label><div id="filtros" class="filters" aria-label="Filtrar por categoría"></div><select id="orden" aria-label="Ordenar deseos"><option value="original">Orden original</option><option value="menor">Menor precio</option><option value="mayor">Mayor precio</option><option value="nombre">Nombre A–Z</option></select></div>
-    <p id="resultado" class="results" role="status"></p><div id="regalos" class="gift-grid"></div><div id="vacio" class="empty" hidden>No encontramos deseos con esa búsqueda. Prueba otra palabra o categoría.</div>
+
+  <!-- BENEFICIOS -->
+
+  <section class="benefits" aria-label="Sobre nuestra lista">
+    <div class="container benefits-grid">
+
+      <div>
+        <span class="benefit-icon">♧</span>
+        <strong>REGALOS CON SIGNIFICADO</strong>
+        <p>Cada deseo cuenta una parte de nuestra historia.</p>
+      </div>
+
+      <div>
+        <span class="benefit-icon">♡</span>
+        <strong>DESEOS PERSONALIZADOS</strong>
+        <p>Inspirados en lo que nos gusta y soñamos.</p>
+      </div>
+
+      <div>
+        <span class="benefit-icon">✧</span>
+        <strong>UN DETALLE ESPECIAL</strong>
+        <p>Elige el deseo que más te inspire.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CATÁLOGO DE REGALOS -->
+
+  <main id="deseos" class="catalog container">
+
+    <div class="catalog-top">
+      <div>
+        <p class="eyebrow bronze">NUESTRA LISTA</p>
+
+        <h2>
+          Todos nuestros deseos
+          <span class="heading-line"></span>
+        </h2>
+      </div>
+
+      <p class="catalog-intro">
+        Un poquito de nuestros gustos, nuestros planes y
+        todo lo que soñamos construir juntos.
+      </p>
+    </div>
+
+    <div class="toolbar">
+
+      <label class="search-wrap">
+        <span aria-hidden="true">⌕</span>
+
+        <input
+          id="buscar"
+          type="search"
+          placeholder="Buscar un deseo..."
+          aria-label="Buscar un deseo"
+        >
+      </label>
+
+      <div
+        id="filtros"
+        class="filters"
+        aria-label="Filtrar por categoría">
+      </div>
+
+      <select id="orden" aria-label="Ordenar deseos">
+        <option value="original">Orden original</option>
+        <option value="menor">Menor precio</option>
+        <option value="mayor">Mayor precio</option>
+        <option value="nombre">Nombre A–Z</option>
+      </select>
+
+    </div>
+
+    <p id="resultado" class="results" role="status"></p>
+
+    <div id="regalos" class="gift-grid"></div>
+
+    <div id="vacio" class="empty" hidden>
+      No encontramos deseos con esa búsqueda.
+      Prueba otra palabra o categoría.
+    </div>
+
   </main>
-  <section id="historia" class="story"><div class="container story-inner"><div><p class="eyebrow gold">NUESTRA HISTORIA</p><h2>Lo más lindo es<br>compartirlo contigo.</h2><p>Gracias por acompañarnos en esta nueva etapa. Cada deseo representa una pequeña parte de lo que nos ilusiona vivir juntos.</p><a class="btn btn-outline" href="#deseos">VER NUESTRA LISTA →</a></div><img src="portada.jpg" alt="Lis y Andrés compartiendo un momento especial frente al mar" loading="lazy"></div></section>
-  <footer><div class="container footer-inner"><span class="monogram">L<span>│</span>A</span><p>Hecho con cariño · Lis & Andrés</p><a href="#inicio">Volver arriba ↑</a></div></footer>
-  <dialog id="detalle" class="modal"><button id="cerrar" class="close" aria-label="Cerrar">×</button><div id="detalle-contenido"></div></dialog>
+
+  <!-- NUESTRA HISTORIA -->
+
+  <section id="historia" class="story">
+    <div class="container story-inner">
+
+      <div>
+        <p class="eyebrow gold">NUESTRA HISTORIA</p>
+
+        <h2>
+          Lo más lindo es<br>
+          compartirlo contigo.
+        </h2>
+
+        <p>
+          Gracias por acompañarnos en esta nueva etapa.
+          Cada deseo representa una pequeña parte de lo
+          que nos ilusiona vivir juntos.
+        </p>
+
+        <a class="btn btn-outline" href="#deseos">
+          VER NUESTRA LISTA →
+        </a>
+      </div>
+
+      <!-- Fotografía inferior -->
+      <img
+        src="nosotros.jpg"
+        alt="Lis y Andrés compartiendo un momento especial frente al mar"
+        loading="lazy"
+      >
+
+    </div>
+  </section>
+
+  <!-- FOOTER ELEGANTE -->
+
+  <footer class="wedding-footer">
+    <div class="container footer-inner">
+
+      <div class="footer-content">
+
+        <h2>Lis & Andrés</h2>
+
+        <p class="footer-phrase">
+          Los mejores momentos son los que compartimos.
+        </p>
+
+        <div class="footer-divider"></div>
+
+        <p class="footer-description">
+          Nuestra lista de deseos · Hecha con amor
+        </p>
+
+        <a href="#inicio" class="footer-top">
+          ↑ Volver al inicio
+        </a>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- DETALLE DE REGALOS -->
+
+  <dialog id="detalle" class="modal">
+    <button id="cerrar" class="close" aria-label="Cerrar">
+      ×
+    </button>
+
+    <div id="detalle-contenido"></div>
+  </dialog>
+
 </body>
 </html>
