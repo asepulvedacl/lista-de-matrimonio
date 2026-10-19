@@ -1,6 +1,7 @@
 
 <!doctype html>
 <html lang="es-CL">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,127 +12,60 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 
   <style>
     /*
-      PORTADA RESPONSIVE
-      Este bloque sustituye únicamente la presentación
-      de la portada definida en style.css.
+      PORTADA ORIGINAL
+      Mismo diseño en computador y celular.
+      Solo cambia la fotografía.
     */
 
     header.hero {
-      position: relative;
-      isolation: isolate;
-      background: #0c2e45 !important;
+      background-image:
+        linear-gradient(
+          90deg,
+          rgba(6, 30, 47, .9) 0%,
+          rgba(8, 36, 55, .63) 33%,
+          rgba(5, 27, 43, .08) 72%
+        ),
+        url("./portada.jpg") !important;
     }
 
+    /* Evita que aparezca la fotografía duplicada */
     header.hero .hero-photo {
-      position: absolute;
-      inset: 0;
-      display: block;
-      z-index: -1;
-      overflow: hidden;
+      display: none !important;
     }
 
-    header.hero .hero-photo img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 44%;
-    }
+    /*
+      CELULAR
+      Se conservan los tamaños, posiciones,
+      textos y botones definidos en style.css.
+    */
 
-    header.hero .hero-photo::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        90deg,
-        rgba(6, 30, 47, 0.9) 0%,
-        rgba(8, 36, 55, 0.63) 33%,
-        rgba(5, 27, 43, 0.08) 72%
-      );
-      pointer-events: none;
-    }
-
-    /* CELULARES */
-
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 720px) {
       header.hero {
-        display: flex;
-        flex-direction: column;
-        height: auto !important;
-        min-height: 0 !important;
-        padding-bottom: 30px;
-        overflow: hidden;
-        background: #0c2e45 !important;
-      }
+        background-image:
+          linear-gradient(
+            90deg,
+            rgba(6, 30, 47, .84),
+            rgba(6, 30, 47, .15)
+          ),
+          url("./portada-mobile.jpg") !important;
 
-      header.hero .hero-photo {
-        position: relative;
-        inset: auto;
-        z-index: 0;
-        order: 0;
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-      }
-
-      header.hero .hero-photo img {
-        width: 100%;
-        height: auto;
-        max-height: none;
-        object-fit: contain;
-        object-position: center;
-      }
-
-      header.hero .hero-photo::after {
-        background: linear-gradient(
-          to bottom,
-          rgba(6, 30, 47, 0.2),
-          transparent 45%,
-          rgba(6, 30, 47, 0.12)
-        );
-      }
-
-      header.hero .nav {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 3;
-        padding-top: 14px;
-      }
-
-      header.hero .hero-content {
-        position: relative;
-        top: auto !important;
-        order: 1;
-        z-index: 1;
-        margin-top: 26px;
-        max-width: none;
-      }
-
-      header.hero h1 {
-        font-size: clamp(46px, 12vw, 64px);
-        line-height: 1.05;
-      }
-
-      header.hero .hero-note {
-        position: relative;
-        order: 2;
-        bottom: auto !important;
-        right: auto;
-        margin: 28px 16px 0;
-        text-align: center;
-        font-size: 14px;
+        background-position: 61% center;
+        background-size: cover;
       }
     }
   </style>
+
 </head>
 
 <body>
@@ -139,18 +73,6 @@
   <!-- PORTADA -->
 
   <header class="hero" id="inicio">
-
-    <picture class="hero-photo">
-      <source
-        media="(max-width: 767px)"
-        srcset="portada-mobile.jpg"
-      >
-      <img
-        src="portada.jpg"
-        alt="Lis y Andrés compartiendo un momento especial frente al mar"
-        fetchpriority="high"
-      >
-    </picture>
 
     <nav class="nav container" aria-label="Navegación principal">
 
@@ -172,9 +94,13 @@
 
     <div class="hero-content container">
 
-      <p class="eyebrow gold">NUESTRA LISTA DE REGALOS</p>
+      <p class="eyebrow gold">
+        NUESTRA LISTA DE REGALOS
+      </p>
 
-      <h1>Un nuevo<br>comienzo</h1>
+      <h1>
+        Un nuevo<br>comienzo
+      </h1>
 
       <div class="gold-line"></div>
 
@@ -198,6 +124,7 @@
   <!-- PRESENTACIÓN -->
 
   <section class="benefits" aria-label="Sobre nuestra lista">
+
     <div class="container benefits-grid">
 
       <div>
@@ -219,51 +146,63 @@
       </div>
 
     </div>
+
   </section>
 
-  <!-- CATÁLOGO -->
+  <!-- CATÁLOGO DE REGALOS -->
 
   <main id="deseos" class="catalog container">
 
     <div class="catalog-top">
+
       <div>
-        <p class="eyebrow bronze">NUESTRA LISTA</p>
+
+        <p class="eyebrow bronze">
+          NUESTRA LISTA
+        </p>
 
         <h2>
           Todos nuestros deseos
           <span class="heading-line"></span>
         </h2>
+
       </div>
 
       <p class="catalog-intro">
         Un poquito de nuestros gustos, nuestros planes
         y todo lo que soñamos construir juntos.
       </p>
+
     </div>
 
     <div class="toolbar">
 
       <label class="search-wrap">
+
         <span aria-hidden="true">⌕</span>
+
         <input
           id="buscar"
           type="search"
           placeholder="Buscar un deseo..."
           aria-label="Buscar un deseo"
         >
+
       </label>
 
       <div
         id="filtros"
         class="filters"
-        aria-label="Filtrar por categoría">
-      </div>
+        aria-label="Filtrar por categoría"
+      ></div>
 
       <select id="orden" aria-label="Ordenar deseos">
+
         <option value="original">Orden original</option>
         <option value="menor">Menor precio</option>
         <option value="mayor">Mayor precio</option>
         <option value="nombre">Nombre A–Z</option>
+
       </select>
 
     </div>
@@ -282,10 +221,14 @@
   <!-- NUESTRA HISTORIA -->
 
   <section id="historia" class="story">
+
     <div class="container story-inner">
 
       <div>
-        <p class="eyebrow gold">NUESTRA HISTORIA</p>
+
+        <p class="eyebrow gold">
+          NUESTRA HISTORIA
+        </p>
 
         <h2>
           Lo más lindo es<br>
@@ -301,21 +244,24 @@
         <a class="btn btn-outline" href="#deseos">
           VER NUESTRA LISTA →
         </a>
+
       </div>
 
       <img
-        src="nosotros.jpg"
+        src="./nosotros.jpg"
         alt="Lis y Andrés compartiendo un momento especial frente al mar"
         loading="lazy"
         decoding="async"
       >
 
     </div>
+
   </section>
 
   <!-- FOOTER -->
 
   <footer class="wedding-footer">
+
     <div class="container footer-inner">
 
       <div class="footer-content">
@@ -339,13 +285,23 @@
       </div>
 
     </div>
+
   </footer>
 
   <!-- DETALLE DE REGALOS -->
 
   <dialog id="detalle" class="modal">
-    <button id="cerrar" class="close" aria-label="Cerrar">×</button>
+
+    <button
+      id="cerrar"
+      class="close"
+      aria-label="Cerrar"
+    >
+      ×
+    </button>
+
     <div id="detalle-contenido"></div>
+
   </dialog>
 
 </body>
