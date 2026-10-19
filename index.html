@@ -21,51 +21,6 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 
-  <style>
-    /*
-      PORTADA ORIGINAL
-      Mismo diseño en computador y celular.
-      Solo cambia la fotografía.
-    */
-
-    header.hero {
-      background-image:
-        linear-gradient(
-          90deg,
-          rgba(6, 30, 47, .9) 0%,
-          rgba(8, 36, 55, .63) 33%,
-          rgba(5, 27, 43, .08) 72%
-        ),
-        url("./portada.jpg") !important;
-    }
-
-    /* Evita que aparezca la fotografía duplicada */
-    header.hero .hero-photo {
-      display: none !important;
-    }
-
-    /*
-      CELULAR
-      Se conservan los tamaños, posiciones,
-      textos y botones definidos en style.css.
-    */
-
-    @media screen and (max-width: 720px) {
-      header.hero {
-        background-image:
-          linear-gradient(
-            90deg,
-            rgba(6, 30, 47, .84),
-            rgba(6, 30, 47, .15)
-          ),
-          url("./portada-mobile.jpg") !important;
-
-        background-position: 61% center;
-        background-size: cover;
-      }
-    }
-  </style>
-
 </head>
 
 <body>
