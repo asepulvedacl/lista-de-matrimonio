@@ -3,7 +3,8 @@
 <html lang="es-CL">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <meta name="theme-color" content="#0c2e45">
   <meta name="description" content="Nuestra lista de deseos: regalos con significado para comenzar una nueva etapa juntos.">
 
@@ -11,6 +12,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
@@ -19,9 +21,10 @@
 
 <body>
 
-  <!-- PORTADA PRINCIPAL -->
+  <!-- PORTADA: utiliza portada.jpg desde style.css -->
 
   <header class="hero" id="inicio">
+
     <nav class="nav container" aria-label="Navegación principal">
 
       <a class="monogram" href="#inicio" aria-label="Inicio">
@@ -37,9 +40,11 @@
       <a class="nav-pill" href="#deseos">
         ♡ Nuestros deseos
       </a>
+
     </nav>
 
     <div class="hero-content container">
+
       <p class="eyebrow gold">NUESTRA LISTA DE REGALOS</p>
 
       <h1>Un nuevo<br>comienzo</h1>
@@ -54,16 +59,19 @@
       <a class="btn btn-gold" href="#deseos">
         EXPLORAR DESEOS <span>→</span>
       </a>
+
     </div>
 
     <div class="hero-note">
       Lis & Andrés <span>·</span> Nuestra historia continúa
     </div>
+
   </header>
 
-  <!-- BENEFICIOS -->
+  <!-- PRESENTACIÓN -->
 
   <section class="benefits" aria-label="Sobre nuestra lista">
+
     <div class="container benefits-grid">
 
       <div>
@@ -85,13 +93,15 @@
       </div>
 
     </div>
+
   </section>
 
-  <!-- CATÁLOGO DE REGALOS -->
+  <!-- CATÁLOGO -->
 
   <main id="deseos" class="catalog container">
 
     <div class="catalog-top">
+
       <div>
         <p class="eyebrow bronze">NUESTRA LISTA</p>
 
@@ -102,9 +112,10 @@
       </div>
 
       <p class="catalog-intro">
-        Un poquito de nuestros gustos, nuestros planes y
-        todo lo que soñamos construir juntos.
+        Un poquito de nuestros gustos, nuestros planes
+        y todo lo que soñamos construir juntos.
       </p>
+
     </div>
 
     <div class="toolbar">
@@ -146,12 +157,14 @@
 
   </main>
 
-  <!-- NUESTRA HISTORIA -->
+  <!-- NUESTRA HISTORIA: utiliza nosotros.jpg -->
 
   <section id="historia" class="story">
+
     <div class="container story-inner">
 
       <div>
+
         <p class="eyebrow gold">NUESTRA HISTORIA</p>
 
         <h2>
@@ -161,28 +174,31 @@
 
         <p>
           Gracias por acompañarnos en esta nueva etapa.
-          Cada deseo representa una pequeña parte de lo
-          que nos ilusiona vivir juntos.
+          Cada deseo representa una pequeña parte de
+          lo que nos ilusiona vivir juntos.
         </p>
 
         <a class="btn btn-outline" href="#deseos">
           VER NUESTRA LISTA →
         </a>
+
       </div>
 
-      <!-- Fotografía inferior -->
       <img
-        src="nosotros.jpg"
+        src="./nosotros.jpg"
         alt="Lis y Andrés compartiendo un momento especial frente al mar"
         loading="lazy"
+        decoding="async"
       >
 
     </div>
+
   </section>
 
-  <!-- FOOTER ELEGANTE -->
+  <!-- FOOTER -->
 
   <footer class="wedding-footer">
+
     <div class="container footer-inner">
 
       <div class="footer-content">
@@ -206,16 +222,19 @@
       </div>
 
     </div>
+
   </footer>
 
   <!-- DETALLE DE REGALOS -->
 
   <dialog id="detalle" class="modal">
+
     <button id="cerrar" class="close" aria-label="Cerrar">
       ×
     </button>
 
     <div id="detalle-contenido"></div>
+
   </dialog>
 
 </body>
