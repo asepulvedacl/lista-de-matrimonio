@@ -48,8 +48,8 @@ button {
 /* PORTADA */
 
 .hero {
-  height: min(670px, 78vh);
-  min-height: 510px;
+  height: min(850px, 100vh);
+  min-height: 760px;
   position: relative;
   color: white;
   background:
@@ -59,7 +59,7 @@ button {
       rgba(8,36,55,.63) 33%,
       rgba(5,27,43,.08) 72%
     ),
-    url('portada-mobile.jpg') center 44% / cover no-repeat;
+    url('portada-mobile.jpg') center bottom / cover no-repeat;
 }
 
 /* Oculta cualquier imagen extra agregada anteriormente */
